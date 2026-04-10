@@ -2,7 +2,7 @@
   <img src="logo.png" width="128" alt="CherryNote Logo">
 </p>
 
-<h1 align="center">CherryNote 🍒</h1>
+<h1 align="center">CherryNote</h1>
 
 <p align="center">
   <strong>Ultra-Lightweight. Borderless. iOS-Inspired. Native Win32.</strong>
@@ -19,16 +19,16 @@
 
 **CherryNote** is a modern, borderless floating widget designed for speed and aesthetics. Built with pure C and the raw Win32 API, it offers a glassmorphic iOS-style experience with zero bloat. It's not just a note; it's a fixed part of your workflow.
 
-## ✨ Why CherryNote?
+##  Why CherryNote?
 
 Unlike standard post-it apps, CherryNote is designed to be invisible when you don't need it and stunningly present when you do.
 
-- **🚀 Performance**: Native C execution with less than 2MB RAM usage. Instant startup.
-- **🎨 Aesthetics**: iOS-style traffic light buttons, smooth gradients, and borderless design with rounded corners.
-- **🧣 Shade Mode**: Slide the notes away into a compact header bar with one click.
-- **🛡️ Secure & Private**: Saves locally to a plain text file. No cloud, no tracking.
+- ** Performance**: Native C execution with less than 2MB RAM usage. Instant startup.
+- ** Aesthetics**: iOS-style traffic light buttons, smooth gradients, and borderless design with rounded corners.
+- ** Shade Mode**: Slide the notes away into a compact header bar with one click.
+- ** Secure & Private**: Saves locally to a plain text file. No cloud, no tracking.
 
-## 🌟 Features
+##  Features
 
 - **Smart Task Management**:
   - `Ctrl + Enter`: Automatic numbering for tasks.
@@ -40,7 +40,7 @@ Unlike standard post-it apps, CherryNote is designed to be invisible when you do
 - **Universal Drag**: Move it from anywhere on the window (when unlocked).
 - **Auto-Save**: Forget about hitting save; your notes are persisted instantly.
 
-## 🛠️ Installation & Build
+##  Installation & Build
 
 ### Binary
 Download the latest `CherryNote.exe` from the [Releases](https://github.com/Luohino/CherryNote/releases) tab.
@@ -52,7 +52,7 @@ Ensure you have **GCC (MinGW)** installed.
 gcc CherryNote.c -o CherryNote.exe -lgdi32 -lcomctl32 -luser32 -lmsimg32 -mwindows -municode
 ```
 
-## ⌨️ Shortcuts
+##  Shortcuts
 
 | Key | Action |
 | :-- | :--- |
@@ -62,8 +62,3 @@ gcc CherryNote.c -o CherryNote.exe -lgdi32 -lcomctl32 -luser32 -lmsimg32 -mwindo
 | `Blue Button` | Lock/Unlock Drag & Resize |
 | `Yellow Button` | Shade Mode |
 
----
-
-<p align="center">
-  Built with ❤️ for the Windows enthusiast community.
-</p>
