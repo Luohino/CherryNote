@@ -13,10 +13,14 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: Set up MinGW
-      uses: egor-tensin/setup-mingw@v2
+    - name: Set up MSYS2
+      uses: msys2/setup-msys2@v2
+      with:
+        msystem: MINGW64
+        install: mingw-w64-x86_64-gcc
 
     - name: Build CherryNote
+      shell: msys2 {0}
       run: |
         gcc CherryNote.c -o CherryNote.exe -lgdi32 -lcomctl32 -luser32 -lmsimg32 -mwindows -municode
 
