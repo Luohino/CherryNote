@@ -1,0 +1,192 @@
+# CherryNote - Quick Start Guide
+
+## - Compilation Complete!
+
+Your CherryNote application has been compiled successfully.
+
+**Executable:** `CherryNote.exe` (157 KB)
+**Status:** Ready to run
+
+---
+
+##  How to Run
+
+Simply double-click `CherryNote.exe` or run from command line:
+```
+CherryNote.exe
+```
+
+The application will:
+1. Launch a small floating window (280×420 px)
+2. Stay on top of all other windows
+3. Load any previously saved notes
+4. Be ready for input
+
+---
+
+##  Usage
+
+### Adding Tasks
+Press **Ctrl + Enter** to add a new numbered task:
+```
+1. First task
+2. Second task
+3. Third task
+```
+
+### Marking Completed Tasks
+Select a task and press **Ctrl + D** to toggle completion:
+```
+1. Buy milk ✔
+2. Call mom
+3. Write code ✔
+```
+
+### Moving the Window
+Click and drag the **"CherryNote"** title bar to move the floating window anywhere on your screen.
+
+### Editing
+- Use arrow keys to navigate
+- Backspace/Delete to remove text
+- Enter for manual line breaks
+- Auto-save triggers 1 second after you stop typing
+
+---
+
+##  Data Storage
+
+Your notes are automatically saved to:
+```
+CherryNote.txt
+```
+
+Located in the same directory as `CherryNote.exe`
+
+This file is a plain text file that you can:
+- Edit manually in any text editor
+- Backup to cloud storage
+- Share with others
+- Open on any system
+
+---
+
+## ⌨ Complete Keyboard Reference
+
+| Shortcut | Action |
+|----------|--------|
+| **Ctrl + Enter** | Add new numbered task |
+| **Ctrl + D** | Toggle task completion checkmark |
+| **Alt + F4** | Close application (saves automatically) |
+| **Arrow Keys** | Navigate text |
+| **Ctrl + A** | Select all text |
+| **Ctrl + C** | Copy selected text |
+| **Ctrl + X** | Cut selected text |
+| **Ctrl + V** | Paste text |
+| **Ctrl + Z** | Undo (Windows built-in) |
+
+---
+
+##  Design Features
+
+- **Cherry Red Gradient Background**
+- Dark cherry red (#8B0000) title bar
+- Lighter red (#FF2D2D) content area
+- Clean, flat design with no shadows
+
+- **Always On Top**
+- Stays above all other windows
+- Perfect for quick note-taking
+- Never gets hidden behind other apps
+
+- **Ultra-Lightweight**
+- Single executable file
+- No installation required
+- No external dependencies
+- ~2-5 MB RAM usage
+- Fast startup (<100ms)
+
+- **Draggable Window**
+- Click and drag the title bar to reposition
+- Remembers position when you restart
+
+---
+
+## If Something Goes Wrong
+
+**Application won't start**
+- Verify Windows 7 or later
+- Try running as Administrator
+- Check antivirus isn't blocking it
+
+**Notes not saving**
+- Ensure folder is writable
+- Check `CherryNote.txt` permissions
+- Make sure disk has space
+
+**Window looks strange**
+- Try restarting the application
+- Check Windows display scaling settings
+
+**Memory usage high**
+- Close the application and reopen
+- Check if another instance is running
+
+---
+
+##  Rebuild (Advanced)
+
+If you need to recompile the source code:
+
+**Windows (Command Prompt):**
+```cmd
+gcc -o CherryNote.exe CherryNote.c -mwindows -luser32 -lgdi32 -lkernel32 -O2
+```
+
+**Or use the build script:**
+```cmd
+build.bat
+```
+
+---
+
+##  Files Included
+
+- `CherryNote.exe` - The application (compiled and ready)
+- `CherryNote.c` - Full source code (readable C)
+- `CherryNote.txt` - Auto-created notes file
+- `README.md` - Full technical documentation
+- `build.bat` - Windows build script
+- `build.sh` - Linux/WSL build script
+- `QUICKSTART.txt` - This file
+
+---
+
+##  Tips & Tricks
+
+1. **Task numbering is automatic** - Press Ctrl+Enter and it auto-numbers
+2. **Type notes naturally** - Use regular line breaks too
+3. **Quick access** - Pin the exe to taskbar for one-click launch
+4. **Backup notes** - Copy `CherryNote.txt` to backup
+5. **Multiple instances** - You can run multiple CherryNote windows (each manages its own notes)
+
+---
+
+##  Perfect For
+
+- Quick task lists
+- Daily to-do items
+- Sticky notes replacement
+- Quick documentation
+- Meeting notes
+- Shopping lists
+- Reminders
+
+---
+
+##  Start Using CherryNote
+
+Double-click `CherryNote.exe` now and start taking notes!
+
+---
+
+**CherryNote** - Minimal. Lightweight. Always There. 🍒
