@@ -1,0 +1,27 @@
+name: Build and Release
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up MinGW
+      uses: egor-tensin/setup-mingw@v2
+
+    - name: Build CherryNote
+      run: |
+        gcc CherryNote.c -o CherryNote.exe -lgdi32 -lcomctl32 -luser32 -lmsimg32 -mwindows -municode
+
+    - name: Archive Production Artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: CherryNote-Binary
+        path: CherryNote.exe

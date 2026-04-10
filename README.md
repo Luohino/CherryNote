@@ -1,147 +1,69 @@
-# CherryNote - Ultra-Lightweight Floating Notes Widget
+<p align="center">
+  <img src="logo.png" width="128" alt="CherryNote Logo">
+</p>
 
-## Build Instructions
+<h1 align="center">CherryNote 🍒</h1>
 
-### Prerequisites
-- **GCC/MinGW** installed and in system PATH
-- **Windows 7 or later** (tested on Windows 10/11)
+<p align="center">
+  <strong>Ultra-Lightweight. Borderless. iOS-Inspired. Native Win32.</strong>
+</p>
 
-### Compilation
-
-**Windows (Command Prompt/PowerShell):**
-```
-gcc -o CherryNote.exe CherryNote.c -mwindows -luser32 -lgdi32 -lkernel32 -O2
-```
-
-**Or use the build batch file:**
-```
-build.bat
-```
-
-**Linux/WSL:**
-```
-bash build.sh
-```
-
-## Features
-
-- **Ultra-Lightweight**
-- Single .exe file (~50-80KB)
-- Minimal memory footprint
-- No external dependencies
-
-- **Always-On-Top Floating Window**
-- Cherry red gradient background (#8B0000 to #FF2D2D)
-- Draggable from title bar
-- Stays above all other windows (WS_EX_TOPMOST)
-
-- **Smart Task Management**
-- Auto-numbered tasks with **Ctrl + Enter**
-- Toggle completion status with **Ctrl + D**
-- Checkmark (✔) marks completed tasks
-
-- **Auto-Save**
-- Notes automatically saved to `CherryNote.txt`
-- Previous notes loaded on startup
-- No data loss
-
-- **Minimal UI**
-- Flat design
-- No shadows or heavy effects
-- Clean, distraction-free interface
-
-## Keyboard Shortcuts
-
-| Shortcut | Action |
-|----------|--------|
-| **Ctrl + Enter** | Insert new numbered task |
-| **Ctrl + D** | Toggle task completion checkmark |
-
-## Technical Details
-
-**Language:** Pure C (C89 compatible)
-**API:** Win32 only
-**Compiler:** GCC (MinGW)
-**Size:** Single executable file
-**Performance:** <5MB RAM usage, zero background processes
-
-## Files
-
-- `CherryNote.c` - Main application source code
-- `CherryNote.exe` - Compiled executable (after build)
-- `CherryNote.txt` - Auto-saved notes file
-- `build.bat` - Windows build script
-- `build.sh` - Linux/WSL build script
-
-## Code Structure
-
-```
-CherryNote.c
-├── Main Entry Point (WinMain)
-├── Window Creation & Management
-├── Edit Control Implementation
-├── Event Handlers
-│   ├── WM_PAINT (rendering)
-│   ├── WM_LBUTTONDOWN (drag start)
-│   ├── WM_MOUSEMOVE (drag tracking)
-│   └── WM_KEYDOWN (shortcuts)
-├── Utility Functions
-│   ├── SaveNotes()
-│   ├── LoadNotes()
-│   ├── GetNextTaskNumber()
-│   ├── ToggleTaskCompletion()
-│   └── UpdateTaskCount()
-└── File I/O & Auto-save
-```
-
-## Performance
-
-- **Memory Usage:** ~2-5MB (includes Windows framework overhead)
-- **Startup Time:** <100ms
-- **CPU Usage:** Negligible when idle
-- **Disk I/O:** Only on changes (throttled to 1-second intervals)
-
-## Window Size
-
-- **Width:** 280 pixels
-- **Height:** 420 pixels
-- **Resizable:** No (locked for consistency)
-- **Movable:** Yes (drag from title bar)
-
-## Notes Format
-
-Tasks are stored as plain text with auto-numbering:
-```
-1. Buy milk
-2. Call mom ✔
-3. Write code
-```
-
-Completed tasks show the checkmark (✔) at the end.
-
-## Troubleshooting
-
-**"gcc is not recognized"**
-- Install MinGW: https://www.mingw-w64.org/
-- Add MinGW `bin` folder to System PATH
-
-**Window appears but won't respond**
-- Press Alt+F4 to close
-- Check if another instance is running
-
-**Notes not saving**
-- Ensure write permissions in the application directory
-- Check that `CherryNote.txt` isn't read-only
-
-## Future Enhancements
-
-- [ ] Custom color themes
-- [ ] Font size adjustment
-- [ ] Multiple note windows
-- [ ] Hotkey to show/hide
-- [ ] System tray integration
-- [ ] Rich text formatting
+<p align="center">
+  <img src="https://img.shields.io/badge/Language-Pure%20C-red?style=flat-square" alt="C">
+  <img src="https://img.shields.io/badge/Platform-Windows-blue?style=flat-square" alt="Windows">
+  <img src="https://img.shields.io/badge/License-GPL--3.0-brightgreen?style=flat-square" alt="License">
+  <img src="https://img.shields.io/badge/RAM-2MB-orange?style=flat-square" alt="RAM">
+</p>
 
 ---
 
-**CherryNote** - Minimal. Lightweight. Always There.
+**CherryNote** is a modern, borderless floating widget designed for speed and aesthetics. Built with pure C and the raw Win32 API, it offers a glassmorphic iOS-style experience with zero bloat. It's not just a note; it's a fixed part of your workflow.
+
+## ✨ Why CherryNote?
+
+Unlike standard post-it apps, CherryNote is designed to be invisible when you don't need it and stunningly present when you do.
+
+- **🚀 Performance**: Native C execution with less than 2MB RAM usage. Instant startup.
+- **🎨 Aesthetics**: iOS-style traffic light buttons, smooth gradients, and borderless design with rounded corners.
+- **🧣 Shade Mode**: Slide the notes away into a compact header bar with one click.
+- **🛡️ Secure & Private**: Saves locally to a plain text file. No cloud, no tracking.
+
+## 🌟 Features
+
+- **Smart Task Management**:
+  - `Ctrl + Enter`: Automatic numbering for tasks.
+  - `Ctrl + D`: Toggle completion status with clean strikethrough logic.
+- **Interactive Controls**:
+  - **Red Circle**: Quick Close.
+  - **Yellow Circle**: Shade Mode (Collapse to Header).
+  - **Blue Circle**: Master Lock (Toggle Move/Resize).
+- **Universal Drag**: Move it from anywhere on the window (when unlocked).
+- **Auto-Save**: Forget about hitting save; your notes are persisted instantly.
+
+## 🛠️ Installation & Build
+
+### Binary
+Download the latest `CherryNote.exe` from the [Releases](https://github.com/Luohino/CherryNote/releases) tab.
+
+### Build from Source
+Ensure you have **GCC (MinGW)** installed.
+
+```powershell
+gcc CherryNote.c -o CherryNote.exe -lgdi32 -lcomctl32 -luser32 -lmsimg32 -mwindows -municode
+```
+
+## ⌨️ Shortcuts
+
+| Key | Action |
+| :-- | :--- |
+| `Ctrl + Enter` | New numbered task |
+| `Ctrl + D` | Toggle strikethrough |
+| `Ctrl + A` | Select all text |
+| `Blue Button` | Lock/Unlock Drag & Resize |
+| `Yellow Button` | Shade Mode |
+
+---
+
+<p align="center">
+  Built with ❤️ for the Windows enthusiast community.
+</p>
